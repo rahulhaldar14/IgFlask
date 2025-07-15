@@ -3,5 +3,5 @@ services:
     name: ig-api
     env: python
     buildCommand: pip install -r requirements.txt && playwright install
-    startCommand: python app.py
+    startCommand: gunicorn app:app
     plan: free
